@@ -1,0 +1,22 @@
+<div class="login">
+<div class="form-container">
+    <h4 class="text-light">Login</h4>
+</div>
+
+<div class="alert-container">
+<div class="alert alert-danger alert-dismissible fade show" role="alert" [hidden]="!showMyAlert">
+      You have entered an incorrect username or password. Guess Again!
+<button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="hideMyAlert()">
+    <span >&times;</span>
+</button>
+</div>
+</div>
+
+<div class="form-container">
+<form class="form">
+    <input class="form-control mt-2" type="username" placeholder="username" aria-label="Username"  id="username" name="username" [(ngModel)]="username">
+    <input class="form-control mt-2" type="password" placeholder="password" aria-label="Password"  id="password" name="password" [(ngModel)]="password">
+    <button class="btn btn-outline-success mt-2" (click)="login()">Login</button>
+  </form>
+</div>
+</div>

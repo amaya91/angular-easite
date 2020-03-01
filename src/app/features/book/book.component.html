@@ -1,0 +1,68 @@
+<div class="book">
+    <div class="container">
+        <h2 class="text-white">Book a Show</h2>
+        <div class='app'>
+
+            <div class='app-top mb-2'>
+            <button type="button" class="btn btn-light mr-1" (click)='toggleVisible()'>Toggle Calendar</button>
+            <button type="button" class="btn btn-light" (click)='toggleWeekends()'>Toggle weekends</button>
+            <!-- <button type="button" class="btn btn-light" (click)='gotoPast()'>go to a date in the past</button> -->
+            </div>
+        
+            <div class='app-calendar bg-black' *ngIf="calendarVisible">
+             <a class=" btn-lg btn-light py-0" data-toggle="modal" data-target="#register">Make a reservation</a>
+            <full-calendar class="text-white-50" style="cursor: pointer;"
+                #calendar
+                defaultView="dayGridMonth"
+                [header]="{
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                }"
+                [plugins]="calendarPlugins"
+                [weekends]="calendarWeekends"
+                [events]="calendarEvents"
+                (dateClick)="handleDateClick($event)"
+            ></full-calendar>
+            </div>
+        
+        </div>
+    </div>    
+</div>
+
+<!--FORM MODAL-->
+<div  class="modal fade" id="register" role="dialog" aria-labelledby="register for"  aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Reserve a Date</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+            <!-- registration form -->
+                <form style="color:#000000;">
+                    <h5 class="mb-4">Basic Info</h5>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Event Name:</label>
+                        <input type="email" class="form-control" id="event">
+                    </div>
+                    <hr class="mb-4">
+                    <button type="submit" class="btn btn-dark btn-lg" data-dismiss="modal">Reserve Now!</button>
+                </form>
+            <!-- /registration form -->
+            </div>
+        </div>
+    </div>
+
+
+

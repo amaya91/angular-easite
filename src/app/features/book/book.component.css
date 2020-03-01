@@ -1,0 +1,18 @@
+
+
+.book {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 43rem;
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, #161616 0%, rgba(44, 43, 43, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .bg-black {
+    background-color: #161616 !important;
+  }

@@ -1,0 +1,87 @@
+
+.nav-link {
+  cursor: pointer;
+}
+
+#mainNav {
+  min-height: 56px;
+  background-color: #fff;
+}
+  
+.navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #161616;
+  border: 1px solid #161616;
+}
+  
+.navbar-brand {
+  color: #161616;
+  font-weight: 700;
+  padding: .9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(white, 80%);
+  outline: none;
+  background-color: transparent;
+}
+
+.contact-section {
+  padding: 1.5rem 0 0;
+}
+
+.contact-section .social {
+  margin-top: 2rem;
+}
+
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-black {
+  background-color: #161616 !important;
+}
+
+footer {
+  padding: 2rem 0;
+}
+  
+/* MEDIA QUERIES */
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    padding: .5rem 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  #mainNav .nav-link:active {
+    color: white;
+  }
+
+}
+  
